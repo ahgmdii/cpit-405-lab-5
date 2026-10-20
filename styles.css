@@ -1,0 +1,166 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+/* Search and team filter */
+.table-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search,
+#team-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+}
+
+#search {
+    width: 220px;
+}
+
+#team-filter {
+    width: 150px;
+}
+
+/* Dark mode button */
+#dark-mode-toggle {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+    background-color: #eee;
+}
+
+th:hover {
+    background-color: #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+.dark-mode table {
+    background-color: #333;
+}
+
+.dark-mode th {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode td {
+    color: #f4f4f4;
+    border-color: #555;
+}
+
+.dark-mode th {
+    border-color: #555;
+}
+
+.dark-mode th:hover {
+    background-color: #555;
+}
+
+.dark-mode tbody tr:hover {
+    background-color: #484848;
+}
+
+.dark-mode #search,
+.dark-mode #team-filter {
+    background-color: #333;
+    color: white;
+    border-color: #666;
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: white;
+    border-color: #777;
+}
+
+/* Make the dashboard usable on small screens */
+@media (max-width: 600px) {
+    .container {
+        width: auto;
+        padding: 12px;
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .table-filters {
+        flex-wrap: wrap;
+    }
+
+    #search {
+        width: 180px;
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
